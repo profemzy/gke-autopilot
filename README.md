@@ -1,5 +1,5 @@
-# gke-autopilot
-Simple Demo of GKE Autopilot 
+# Terraform GKE-Autopilot
+Simple Demo of GKE Autopilot using terraform 
 
 Google introduced GKE Autopilot(https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview)
 
