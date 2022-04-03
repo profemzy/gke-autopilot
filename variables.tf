@@ -10,3 +10,10 @@ variable "region" {
 variable "zone" {
   description = "GCP Zone"
 }
+
+variable "allowed-ips" {
+  type = list(object({
+    cidr_block   = string,
+    display_name = string
+  }))
+}

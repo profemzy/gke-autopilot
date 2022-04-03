@@ -3,19 +3,19 @@ module "vpc" {
   version = "~> 4.0"
 
   project_id   = var.project_id
-  network_name = "ops-vpc"
+  network_name = "${var.project_id}-vpc"
   routing_mode = "GLOBAL"
 
   subnets = [
     {
-      subnet_name   = "ops-subnet"
+      subnet_name   = "${var.project_id}-subnet"
       subnet_ip     = "10.0.0.0/20"
       subnet_region = var.region
     }
   ]
 
   secondary_ranges = {
-    ops-subnet = [
+    sharkmob-ops-tools-subnet = [
       {
         range_name    = "pods"
         ip_cidr_range = "172.16.0.0/15"

@@ -13,8 +13,5 @@ module "gke" {
   ip_range_services               = "services"
   horizontal_pod_autoscaling      = true
   enable_vertical_pod_autoscaling = true
-  master_authorized_networks = [{
-    cidr_block   = "95.196.144.135/32"
-    display_name = "home-ip"
-  }]
+  master_authorized_networks      = var.allowed-ips
 }
