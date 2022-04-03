@@ -1,6 +1,6 @@
 provider "google" {
-  project = "sre-scratchpad"
-  region  = "europe-west1"
+  project = var.project_id
+  region  = var.region
 }
 
 provider "google-beta" {
