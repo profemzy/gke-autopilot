@@ -15,7 +15,7 @@ module "vpc" {
   ]
 
   secondary_ranges = {
-    sharkmob-ops-tools-subnet = [
+    "${var.project_id}-subnet" = [
       {
         range_name    = "pods"
         ip_cidr_range = "172.16.0.0/15"
